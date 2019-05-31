@@ -22,6 +22,8 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.ObjectOutputStream;
+import servidor.BDEspacos.BDSalas.BDAuditorio;
+import servidor.BDEspacos.BDSalas.BDLaboratorio;
 import servidor.BDEspacos.BDSalas.BDSalas;
 
 import servidor.BDProfessor.BDProfessor;
@@ -116,13 +118,22 @@ class TrataCliente extends Thread {
                     //verificar o banco de dados
                     if(compara[1].equals("Sala")){
                         saida.writeObject(BDSalas.verificasala(compara[2]));
+                    } else if(compara[1].equals("Laboratorio")){
+                        saida.writeObject(BDLaboratorio.verifilaboratorio(compara[2]));
+                    } else if(compara[1].equals("Auditorio")){
+                        saida.writeObject(BDAuditorio.verifiauditorio(compara[2]));
                     }
+                    
                 }
                 else if(compara[0].equals("4")){
                      if(compara[1].equals("Sala")){
                     
                      saida.writeObject(BDSalas.addSalas(compara[2], compara[3], compara[4]));
-                     }
+                     }else if(compara[1].equals("Laboratorio")){
+                        saida.writeObject(BDLaboratorio.addlaboratorio(compara[2],compara[3],compara[4],compara[5]));
+                    } else if(compara[1].equals("Auditorio")){
+                        saida.writeObject(BDAuditorio.addauditorio(compara[2],compara[3],compara[4],compara[5]));
+                    }
                 }
 
                
