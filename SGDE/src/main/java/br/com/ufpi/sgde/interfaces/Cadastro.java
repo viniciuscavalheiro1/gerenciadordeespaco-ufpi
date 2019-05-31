@@ -5,7 +5,7 @@
  */
 package br.com.ufpi.sgde.interfaces;
 
-import static br.com.ufpi.sgde.funcoes.Cliente.enviarServidor;
+import static br.com.ufpi.sgde.funcoes.Client.enviarServidor;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

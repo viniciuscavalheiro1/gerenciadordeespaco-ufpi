@@ -5,7 +5,7 @@
  */
 package br.com.ufpi.sgde.interfaces;
 
-import br.com.ufpi.sgde.funcoes.Cliente;
+import br.com.ufpi.sgde.funcoes.Client;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.PrintStream;
@@ -13,6 +13,7 @@ import java.net.Socket;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -121,8 +122,19 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         String enviaLogin = "2," + tipoUsuario.getSelectedItem() +","+ login.getText() + "," + senha.getText();
         try {
-            String usuario = Cliente.enviarServidor(enviaLogin);
-            System.out.println(usuario);
+            String usuario = Client.enviarServidor(enviaLogin);
+            if(usuario.equals("null")){
+                 JOptionPane.showMessageDialog(null,"Senha e/ou login incorretos");
+            }else{
+                String[] compara = usuario.split(",");
+                 JOptionPane.showMessageDialog(null,"Bem vindo "+compara[0]);
+                    if(compara[4].equals("Coordenador")){
+                        TelaGerente tela = new TelaGerente();
+                        tela.show();
+
+                        dispose();
+                    }
+            }
         } catch (IOException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
