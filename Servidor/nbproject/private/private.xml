@@ -3,13 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/pedro/Downloads/Servidor/src/servidor/BDProfessor/ConexaoProfessor.java</file>
-            <file>file:/home/pedro/Downloads/Servidor/src/servidor/Servidor.java</file>
-            <file>file:/home/pedro/Downloads/Servidor/src/servidor/BDProfessor/CriarTabelaProfessor.java</file>
-            <file>file:/home/pedro/Downloads/Servidor/src/servidor/BDGerente/BDGerente.java</file>
-            <file>file:/home/pedro/Downloads/Servidor/src/servidor/BDGerente/ConexaoGerente.java</file>
-            <file>file:/home/pedro/Downloads/Servidor/src/servidor/BDProfessor/BDProfessor.java</file>
-            <file>file:/home/pedro/Downloads/Servidor/src/servidor/BDGerente/CriarTabelaGerente.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/Servidor.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/CriarTabelaAuditorio.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/BDAuditorio.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/CriarTabelaSalas.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/ConexaoSalas.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/BDReservas.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/ConexaoReserva.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/BDSalas.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDGerente/BDGerente.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/CriarTabelaReservas.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/test/servidor/BDEspacos/BDSalas/BDAuditorioTest.java</file>
         </group>
     </open-files>
 </project-private>

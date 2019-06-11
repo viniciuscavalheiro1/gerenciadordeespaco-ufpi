@@ -50,6 +50,11 @@ public class CadastrarSala extends javax.swing.JFrame {
         jLabel1.setText("Bloco");
 
         bloco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administração", "Biologia/Nutricao", "Enfermagem/Pedagogia", "História/Educação do campo", "Sistemas de Informação/Letras", "Matemática", "Medicina" }));
+        bloco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                blocoActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Numero");
 
@@ -133,6 +138,10 @@ public class CadastrarSala extends javax.swing.JFrame {
         }
        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void blocoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_blocoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_blocoActionPerformed
 
     /**
      * @param args the command line arguments

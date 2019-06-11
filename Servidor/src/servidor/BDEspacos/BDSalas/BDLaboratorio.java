@@ -137,5 +137,46 @@ public class BDLaboratorio {
              return "null";
                   }
           }     
-    
+ 
+ public static String retornatodos(String bloco){
+     String lista = "";
+        ConexaoLaboratorio conec = new ConexaoLaboratorio();    
+       conec.conectar();
+       
+          ResultSet resultset = null;
+           Statement statement = null;
+        
+          
+          String sql = "SELECT * FROM laboratorio;";
+                 
+                  statement = conec.CriarStatement();
+                  
+                int i=0;
+                String valor = null;
+                            String certo = "";
+        
+       
+                  try {
+                     
+            resultset = statement.executeQuery(sql);
+
+                      while (resultset.next()) {
+                      ResultSet s = resultset;
+                         System.out.println(s.getString("bloco"));
+                         if(resultset.getString("bloco").equals(bloco))
+                         certo = lista.concat(s.getString("numero")+","); 
+                              i++;
+                          }
+                      
+        } catch (Exception e) {
+                      System.out.println("Alguem erro "+e);
+        }
+                  if(i>0){
+                      conec.desconectar();
+             return certo;
+                  }else{
+                
+             return "null";
+                  }
+          }  
 }
