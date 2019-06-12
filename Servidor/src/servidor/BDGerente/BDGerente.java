@@ -92,21 +92,7 @@ public class BDGerente {
                 }    
             return "erro";
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         
         
         
@@ -157,8 +143,10 @@ public static String loginGerente(String CPF, String senha) throws SQLException{
                               System.out.println("Encontrado");
                               System.out.println(resultset.getString("senha"));
                           
-                                if(senha.equals(resultset.getString("senha"))){                                   
-                                    return resultset.getString("nome")+","+resultset.getString("cpf")+","+resultset.getString("matricula")+","+resultset.getString("senha")+","+resultset.getString("tipo");
+                                if(senha.equals(resultset.getString("senha"))){ 
+                                    String gambiarra = resultset.getString("nome")+","+resultset.getString("cpf")+","+resultset.getString("matricula")+","+resultset.getString("senha")+","+resultset.getString("tipo");
+                                    conec.desconectar();
+                                    return gambiarra;
                                    }   
                                     
                                 }

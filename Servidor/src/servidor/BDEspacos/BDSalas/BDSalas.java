@@ -65,7 +65,7 @@ public class BDSalas {
                   
             
             if(resulado == 1){
-                System.out.println("Professor Cadastrado");
+                System.out.println("Sala Cadastrada");
                 preparedstatment.close();
                 conec.desconectar();
                     return "cadastrado";
@@ -137,5 +137,54 @@ public class BDSalas {
              return "null";
                   }
           }       
-    
-}
+  
+ public static String retornatodos(String curso){
+     String lista = "";
+        ConexaoSalas conec = new ConexaoSalas();    
+       conec.conectar();
+       
+          ResultSet resultset = null;
+           Statement statement = null;
+        
+          
+          String sql = "SELECT * FROM salas;";
+                 
+                  statement = conec.CriarStatement();
+                  
+                int i=0;
+                String valor = null;
+                            String certo = "";
+        
+       
+                  try {
+                     
+            resultset = statement.executeQuery(sql);
+
+                      while (resultset.next()) {
+                      ResultSet s = resultset;
+                        
+                           if (s.getString("bloco").equals(curso)){
+                               System.out.println(s.getString("bloco"));
+                         certo = lista.concat(s.getString("numero")+","); 
+                              i++;
+                           }
+                          
+                          }
+                      
+        } catch (Exception e) {
+                      System.out.println("Alguem erro "+e);
+        }
+                  if(i>0){
+                      conec.desconectar();
+             return certo;
+                  }else{
+                
+             return "null";
+                  }
+          }  
+     
+     
+     
+     
+ }
+

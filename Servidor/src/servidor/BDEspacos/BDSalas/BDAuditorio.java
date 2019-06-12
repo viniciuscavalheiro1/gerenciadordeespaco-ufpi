@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package servidor.BDEspacos.BDSalas;
 
 import java.sql.PreparedStatement;
@@ -136,6 +132,132 @@ public class BDAuditorio {
                 
              return "null";
                   }
-          }     
-    
+          }
+ 
+ public static String reservarauditorio(String nome,String data, String horaini, String horafim ,String responsavel, String Observacoes){
+     boolean reserva = true; 
+     ConexaoReserva conec = new ConexaoReserva();    
+       conec.conectar();
+       
+          ResultSet resultset = null;
+           Statement statement = null;
+        
+          
+          String sql = "SELECT * FROM reservas;";
+                 
+                  statement = conec.CriarStatement();
+                  
+                int i=0;
+                String valor = null;
+       
+                  try {
+                     
+            resultset = statement.executeQuery(sql);
+
+
+                      while (resultset.next()) {
+
+                      
+                            if(resultset.getString("numero").equals(nome)){
+
+                                String[] separa =  resultset.getString("data").split("/");
+                                int dia =Integer.valueOf(separa[0]), mes = Integer.valueOf(separa[1]), ano = Integer.valueOf(separa[2]);
+                                String[] dataaser = data.split("/");
+                                int d = Integer.valueOf(dataaser[0]), m = Integer.valueOf(dataaser[1]), a = Integer.valueOf(dataaser[2]);
+                                    if (ano ==a ){
+                                        if(mes == m){
+                                            if(dia == d){
+                                               String[] horamarcadainicio = resultset.getString("horaini").split(":");
+                                               String[] horamarcadafim = resultset.getString("horafim").split(":");
+                                               String[] horaquerendoinicio = horaini.split(":");
+                                               String[] horaquerendofim = horafim.split(":");
+                                               //gambiarra 
+
+                                                String recebehoramarcadainicio ="";
+                                                recebehoramarcadainicio = recebehoramarcadainicio.concat(horamarcadainicio[0]);
+                                                recebehoramarcadainicio = recebehoramarcadainicio.concat(horamarcadainicio[1]);
+                                                String recebehoraquerendo = "";
+                                               recebehoraquerendo= recebehoraquerendo.concat(horaquerendoinicio[0]);
+                                                recebehoraquerendo =recebehoraquerendo.concat(horaquerendoinicio[1]);
+                                                String recebehorafimmarcada = "";
+                                               recebehorafimmarcada= recebehorafimmarcada.concat(horamarcadafim[0]);
+
+                                                recebehorafimmarcada =recebehorafimmarcada.concat(horamarcadafim[1]);
+                                                String recebeforaquerendofim = "";
+                                                recebehorafimmarcada = recebeforaquerendofim.concat(horaquerendofim[0]);
+                                                 recebeforaquerendofim =recebeforaquerendofim.concat(horaquerendofim[1]);
+                                                int horamilmarcadainicio = Integer.valueOf(recebehoramarcadainicio);
+                                                int horamilquerendoinicio = Integer.valueOf(recebehoraquerendo);
+                                                int horamilmarcadafim = Integer.valueOf(recebehorafimmarcada);
+                                                int horamilquerendofim = Integer.valueOf(recebeforaquerendofim);
+                                                    if(horamilmarcadainicio <= horamilquerendoinicio || horamilquerendoinicio <= horamilmarcadafim){
+                                                        if(horamilquerendofim <= horamilmarcadainicio || horamilquerendofim <= horamilmarcadafim){
+                                                            reserva = false;
+                                                        }
+                                                    }
+                                            }
+                   
+                                        }
+                                    }
+                            }
+  
+ }
+                  } catch (Exception e) {
+                      System.out.println("Alguem erro "+e);
+        }
+                  
+                  
+                  if(reserva == true){
+                      
+                    String recebe =   BDReservas.addreserva(nome, data, horaini, horafim, responsavel, Observacoes);
+
+                          return "ok";
+
+                      
+                  }else{
+                      return "erro";        
+                  }
+                  
+ }
+
+ public static String retornatodos(String curso){
+     String lista = "";
+        ConexaoAuditorio conec = new ConexaoAuditorio();    
+       conec.conectar();
+       
+          ResultSet resultset = null;
+           Statement statement = null;
+        
+          
+          String sql = "SELECT * FROM auditorios;";
+                 
+                  statement = conec.CriarStatement();
+                  
+                int i=0;
+                String valor = null;
+                            String certo = "";
+        
+       
+                  try {
+                     
+            resultset = statement.executeQuery(sql);
+
+                      while (resultset.next()) {
+                      ResultSet s = resultset;
+                         certo = lista.concat(s.getString("nome")+","); 
+                              i++;                           
+                          
+                          }
+                      
+        } catch (Exception e) {
+                      System.out.println("Alguem erro "+e);
+        }
+                  if(i>0){
+                      conec.desconectar();
+             return certo;
+                  }else{
+                
+             return "null";
+                  }
+          }  
 }

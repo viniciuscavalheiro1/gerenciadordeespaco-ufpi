@@ -5,6 +5,7 @@
  */
 package br.com.ufpi.sgde.interfaces;
 
+
 /**
  *
  * @author pedro
@@ -16,7 +17,10 @@ public class TelaGerente extends javax.swing.JFrame {
      */
     public TelaGerente() {
         initComponents();
-    }
+      
+        }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,43 +32,35 @@ public class TelaGerente extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         jMenuItem6.setText("jMenuItem6");
 
+        jMenuItem11.setText("jMenuItem11");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("Reservas");
-
-        jMenuItem1.setText("Reservar Sala");
-        jMenu1.add(jMenuItem1);
-
-        jMenuItem4.setText("Reservar Labotarório");
-        jMenu1.add(jMenuItem4);
-
-        jMenuItem5.setText("Reservar Auditório");
-        jMenu1.add(jMenuItem5);
-
-        jMenuItem2.setText("Cancelar Reserva");
-        jMenu1.add(jMenuItem2);
-
-        jMenuItem3.setText("Verificar Reserva");
-        jMenu1.add(jMenuItem3);
-
-        jMenuBar1.add(jMenu1);
+        jButton1.setText("Realizar Reserva");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jMenu2.setText("Espaços");
+
+        jMenuItem10.setText("jMenuItem10");
+        jMenu2.add(jMenuItem10);
 
         jMenuItem7.setText("Cadastrar Sala");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -90,9 +86,26 @@ public class TelaGerente extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem9);
 
+        jMenuItem2.setText("Verificar Reserva");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem2);
+
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Cadastrar Usuario");
+
+        jMenuItem1.setText("Cadastro de Usuario");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
+
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -101,11 +114,17 @@ public class TelaGerente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addComponent(jButton1)
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jButton1)
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
         pack();
@@ -125,6 +144,20 @@ public class TelaGerente extends javax.swing.JFrame {
         CadastrarAuditorio cadaud = new CadastrarAuditorio();
         cadaud.show();
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       EspacosReserva reserva = new EspacosReserva();
+       reserva.show();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        Cadastro cadastro = new Cadastro();
+        cadastro.show();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,18 +192,21 @@ public class TelaGerente extends javax.swing.JFrame {
                 new TelaGerente().setVisible(true);
             }
         });
+      
     }
+    
+ 
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
