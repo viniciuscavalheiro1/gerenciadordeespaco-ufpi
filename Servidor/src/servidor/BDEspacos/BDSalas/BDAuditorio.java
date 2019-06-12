@@ -154,11 +154,12 @@ public class BDAuditorio {
                      
             resultset = statement.executeQuery(sql);
 
- 
+
                       while (resultset.next()) {
+
                       
-                      
-                            if(resultset.getString("nome").equals(nome)){
+                            if(resultset.getString("numero").equals(nome)){
+
                                 String[] separa =  resultset.getString("data").split("/");
                                 int dia =Integer.valueOf(separa[0]), mes = Integer.valueOf(separa[1]), ano = Integer.valueOf(separa[2]);
                                 String[] dataaser = data.split("/");
@@ -166,30 +167,31 @@ public class BDAuditorio {
                                     if (ano ==a ){
                                         if(mes == m){
                                             if(dia == d){
-                                               String[] horamarcadainicio = resultset.getString("noraini").split(":");
+                                               String[] horamarcadainicio = resultset.getString("horaini").split(":");
                                                String[] horamarcadafim = resultset.getString("horafim").split(":");
                                                String[] horaquerendoinicio = horaini.split(":");
                                                String[] horaquerendofim = horafim.split(":");
                                                //gambiarra 
-                                                String recebehoramarcadainicio = null;
-                                                recebehoramarcadainicio.concat(horamarcadainicio[0]);
-                                                recebehoramarcadainicio.concat(horamarcadainicio[1]);
-                                                String recebehoraquerendo = null;
-                                                recebehoraquerendo.concat(horaquerendoinicio[0]);
-                                                recebehoraquerendo.concat(horaquerendoinicio[1]);
-                                                String recebehorafimmarcada = null;
-                                                recebehorafimmarcada.concat(horamarcadafim[0]);
-                                                recebehorafimmarcada.concat(horamarcadafim[1]);
-                                                String recebeforaquerendofim = null;
-                                                recebeforaquerendofim.concat(horaquerendofim[0]);
-                                                recebeforaquerendofim.concat(horaquerendofim[1]);
+
+                                                String recebehoramarcadainicio ="";
+                                                recebehoramarcadainicio = recebehoramarcadainicio.concat(horamarcadainicio[0]);
+                                                recebehoramarcadainicio = recebehoramarcadainicio.concat(horamarcadainicio[1]);
+                                                String recebehoraquerendo = "";
+                                               recebehoraquerendo= recebehoraquerendo.concat(horaquerendoinicio[0]);
+                                                recebehoraquerendo =recebehoraquerendo.concat(horaquerendoinicio[1]);
+                                                String recebehorafimmarcada = "";
+                                               recebehorafimmarcada= recebehorafimmarcada.concat(horamarcadafim[0]);
+
+                                                recebehorafimmarcada =recebehorafimmarcada.concat(horamarcadafim[1]);
+                                                String recebeforaquerendofim = "";
+                                                recebehorafimmarcada = recebeforaquerendofim.concat(horaquerendofim[0]);
+                                                 recebeforaquerendofim =recebeforaquerendofim.concat(horaquerendofim[1]);
                                                 int horamilmarcadainicio = Integer.valueOf(recebehoramarcadainicio);
                                                 int horamilquerendoinicio = Integer.valueOf(recebehoraquerendo);
                                                 int horamilmarcadafim = Integer.valueOf(recebehorafimmarcada);
                                                 int horamilquerendofim = Integer.valueOf(recebeforaquerendofim);
-                                                
-                                                    if(horamilmarcadainicio <= horamilquerendoinicio && horamilquerendoinicio <= horamilmarcadafim){
-                                                        if(horamilquerendofim <= horamilmarcadainicio && horamilquerendofim <= horamilmarcadafim){
+                                                    if(horamilmarcadainicio <= horamilquerendoinicio || horamilquerendoinicio <= horamilmarcadafim){
+                                                        if(horamilquerendofim <= horamilmarcadainicio || horamilquerendofim <= horamilmarcadafim){
                                                             reserva = false;
                                                         }
                                                     }
@@ -208,17 +210,12 @@ public class BDAuditorio {
                   if(reserva == true){
                       
                     String recebe =   BDReservas.addreserva(nome, data, horaini, horafim, responsavel, Observacoes);
-                      if(recebe.contains("cadastrado")){
+
                           return "ok";
-                      }else{
-                          return "erro";
-                      }
+
+                      
                   }else{
-                      return "erro";
-                      
-                      
-                      
-                      
+                      return "erro";        
                   }
                   
  }
@@ -232,7 +229,7 @@ public class BDAuditorio {
            Statement statement = null;
         
           
-          String sql = "SELECT * FROM auditorio;";
+          String sql = "SELECT * FROM auditorios;";
                  
                   statement = conec.CriarStatement();
                   

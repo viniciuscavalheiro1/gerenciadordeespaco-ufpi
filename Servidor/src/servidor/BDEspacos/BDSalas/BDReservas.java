@@ -42,7 +42,7 @@ public class BDReservas {
                   System.out.println("1");
                     
                      String sqlInsert = "INSERT INTO reservas ("
-                          + "nome,"
+                          + "numero,"
                           + "data,"
                              + "horaini,"
                              + "horafim,"
@@ -59,7 +59,7 @@ public class BDReservas {
           preparedstatment.setString (2,data);
           preparedstatment.setString (3, horaini);
           preparedstatment.setString (4, horafim);
-           preparedstatment.setString (5, responsavel);
+          preparedstatment.setString (5, responsavel);
           preparedstatment.setString (6, Observacoes);
           
 

@@ -138,8 +138,16 @@ class TrataCliente extends Thread {
                         
                         saida.writeObject(BDAuditorio.retornatodos(compara[1]));
                     }
-                
+                //Verifica se é reserva de espaço
+           }else if(compara[0].equals("6")){
+               //Verifica
+             
+                   
+                 saida.writeObject(BDAuditorio.reservarauditorio(compara[2], compara[3], compara[4],compara[5],compara[6],compara[7]));
+               
+               
            }
+                
                 } catch (IOException | SQLException e) {
                     System.out.println("Cliente foi desconectado");
                      System.exit(1);

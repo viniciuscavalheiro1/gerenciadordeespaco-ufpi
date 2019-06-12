@@ -164,7 +164,7 @@ public class BDLaboratorio {
                       ResultSet s = resultset;
                          System.out.println(s.getString("bloco"));
                          if(resultset.getString("bloco").equals(bloco))
-                         certo = lista.concat(s.getString("numero")+","); 
+                         certo = lista.concat(resultset.getString("numero")+","); 
                               i++;
                           }
                       

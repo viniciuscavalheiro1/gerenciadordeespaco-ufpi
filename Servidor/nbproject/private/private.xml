@@ -8,11 +8,10 @@
             <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/BDAuditorio.java</file>
             <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/CriarTabelaSalas.java</file>
             <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/ConexaoSalas.java</file>
-            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/BDReservas.java</file>
             <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/ConexaoReserva.java</file>
-            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/BDSalas.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/BDReservas.java</file>
+            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/BDLaboratorio.java</file>
             <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDGerente/BDGerente.java</file>
-            <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/src/servidor/BDEspacos/BDSalas/CriarTabelaReservas.java</file>
             <file>file:/home/pedro/Github/gerenciadordeespaco-ufpi/Servidor/test/servidor/BDEspacos/BDSalas/BDAuditorioTest.java</file>
         </group>
     </open-files>
