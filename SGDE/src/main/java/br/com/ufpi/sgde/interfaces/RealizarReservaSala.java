@@ -38,7 +38,7 @@ public class RealizarReservaSala extends javax.swing.JFrame {
 
         jLabel1.setText("Bloco");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(16, 49, 50, 30);
+        jLabel1.setBounds(70, 90, 50, 30);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sala", "Laboratório", "Auditorio" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -47,15 +47,15 @@ public class RealizarReservaSala extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(90, 50, 120, 27);
+        jComboBox1.setBounds(140, 90, 180, 33);
 
         jLabel2.setText("Numero");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 110, 60, 17);
+        jLabel2.setBounds(60, 150, 60, 16);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(90, 100, 130, 27);
+        jComboBox2.setBounds(140, 140, 130, 33);
 
         setSize(new java.awt.Dimension(410, 330));
         setLocationRelativeTo(null);

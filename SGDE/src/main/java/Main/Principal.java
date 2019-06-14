@@ -14,10 +14,10 @@ import br.com.ufpi.sgde.interfaces.Testar;
  *
  * @author pedro
  */
-public class main {
+public class Principal {
 
     public static void main(String[] args) {
-     Login telag = new Login();
+        Login telag = new Login();
         telag.show();
 
     }

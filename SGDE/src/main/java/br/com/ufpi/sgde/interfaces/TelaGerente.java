@@ -36,7 +36,6 @@ public class TelaGerente extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
@@ -58,9 +57,6 @@ public class TelaGerente extends javax.swing.JFrame {
         });
 
         jMenu2.setText("Espaços");
-
-        jMenuItem10.setText("jMenuItem10");
-        jMenu2.add(jMenuItem10);
 
         jMenuItem7.setText("Cadastrar Sala");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -115,16 +111,16 @@ public class TelaGerente extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(132, 132, 132)
+                .addGap(283, 283, 283)
                 .addComponent(jButton1)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addComponent(jButton1)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(184, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(198, 198, 198))
         );
 
         pack();
@@ -204,7 +200,6 @@ public class TelaGerente extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem6;
