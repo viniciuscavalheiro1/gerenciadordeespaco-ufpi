@@ -54,24 +54,24 @@ public class CadastrarLaboratorio extends javax.swing.JFrame {
 
         n.setText("Nome");
         getContentPane().add(n);
-        n.setBounds(90, 220, 36, 16);
+        n.setBounds(90, 220, 80, 16);
 
         jLabel2.setText("Bloco");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(90, 180, 35, 16);
+        jLabel2.setBounds(90, 180, 60, 16);
         getContentPane().add(nome);
-        nome.setBounds(250, 210, 330, 33);
+        nome.setBounds(280, 210, 330, 33);
 
         jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 13)); // NOI18N
         jLabel3.setText("CADASTRO DE LABORATÓRIO");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(270, 140, 200, 16);
+        jLabel3.setBounds(300, 140, 200, 16);
 
         ac.setText("Capacidade");
         getContentPane().add(ac);
-        ac.setBounds(90, 260, 100, 16);
+        ac.setBounds(90, 260, 140, 16);
         getContentPane().add(capacidade);
-        capacidade.setBounds(250, 250, 330, 33);
+        capacidade.setBounds(280, 250, 330, 33);
 
         jButton1.setText("Cadastrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -80,22 +80,22 @@ public class CadastrarLaboratorio extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(320, 390, 70, 40);
+        jButton1.setBounds(350, 390, 120, 40);
 
         bloco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administração", "Biologia/Nutricao", "Enfermagem/Pedagogia", "História/Educação do campo", "Sistemas de Informação/Letras", "Matemática", "Medicina" }));
         getContentPane().add(bloco);
-        bloco.setBounds(250, 170, 330, 33);
+        bloco.setBounds(280, 170, 330, 33);
 
         Observacoes.setColumns(20);
         Observacoes.setRows(5);
         jScrollPane1.setViewportView(Observacoes);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(250, 290, 330, 82);
+        jScrollPane1.setBounds(280, 290, 330, 82);
 
         jLabel1.setText("Observações");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(90, 320, 100, 16);
+        jLabel1.setBounds(90, 320, 120, 16);
 
         jLabel4.setIcon(new javax.swing.ImageIcon("/home/vinicius/gerenciadordeespaco-ufpi/SGDE/src/main/java/br/com/ufpi/sgde/imagens/icons8-microscópio-100.png")); // NOI18N
         getContentPane().add(jLabel4);
@@ -110,7 +110,7 @@ public class CadastrarLaboratorio extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(20, 390, 34, 34);
 
-        setSize(new java.awt.Dimension(732, 480));
+        setSize(new java.awt.Dimension(756, 480));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
