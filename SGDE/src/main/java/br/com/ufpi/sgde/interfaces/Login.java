@@ -161,6 +161,8 @@ public class Login extends javax.swing.JFrame {
 
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
         // TODO add your handling code here:
+        Cadastro cadastro = new Cadastro();
+        cadastro.show();
     }//GEN-LAST:event_cadastrarActionPerformed
 
     /**

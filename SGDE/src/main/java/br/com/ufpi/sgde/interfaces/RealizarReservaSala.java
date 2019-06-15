@@ -32,13 +32,16 @@ public class RealizarReservaSala extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Reservar Sala");
         getContentPane().setLayout(null);
 
         jLabel1.setText("Bloco");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 90, 50, 30);
+        jLabel1.setBounds(140, 200, 50, 30);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sala", "Laboratório", "Auditorio" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -47,23 +50,39 @@ public class RealizarReservaSala extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(140, 90, 180, 33);
+        jComboBox1.setBounds(220, 200, 180, 33);
 
         jLabel2.setText("Numero");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(60, 150, 60, 16);
+        jLabel2.setBounds(140, 260, 60, 16);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(jComboBox2);
-        jComboBox2.setBounds(140, 140, 130, 33);
+        jComboBox2.setBounds(220, 250, 180, 33);
 
-        setSize(new java.awt.Dimension(410, 330));
+        jLabel3.setIcon(new javax.swing.ImageIcon("/home/vinicius/gerenciadordeespaco-ufpi/SGDE/src/main/java/br/com/ufpi/sgde/imagens/icons8-sala-de-aula-100.png")); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(230, 20, 130, 120);
+
+        jButton2.setIcon(new javax.swing.ImageIcon("/home/vinicius/gerenciadordeespaco-ufpi/SGDE/src/main/java/br/com/ufpi/sgde/imagens/icons8-à-esquerda-dentro-de-um-círculo-24.png")); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(10, 360, 34, 34);
+
+        setSize(new java.awt.Dimension(560, 445));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,9 +122,11 @@ public class RealizarReservaSala extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
